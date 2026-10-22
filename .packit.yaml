@@ -87,7 +87,10 @@ jobs:
         - artifacts:
             - id: "https://raw.githubusercontent.com/kokesak/goose-stock-repo-file/refs/heads/main/goose-copr.repo"
               type: repository-file
-              install: false
+              install: true
+              packages:
+                - goose*main*
+              order: 0
           settings:
             provisioning:
               tags:
